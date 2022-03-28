@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@100&display=swap');
+
+.ticket-info{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
+    text-align:start;
+}

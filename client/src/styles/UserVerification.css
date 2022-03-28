@@ -1,0 +1,19 @@
+.verify-page{
+    height: 100vh;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-form{
+    border-radius: 8px;
+    background-color:blueviolet;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: -0.5rem 0 3rem #000;
+    transition: 0.2s;
+}
+.box-form:hover{
+    transform: translateY(-0.5rem);
+}

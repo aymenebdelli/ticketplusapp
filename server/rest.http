@@ -1,0 +1,101 @@
+### user create end point (from vscode extension rest client)
+POST http://localhost:5000/api/user
+Content-Type: application/json
+
+{
+    "name": "aymen ebdelli",
+    "company" : "some name",
+    "address" : "address am",
+     "phone": "441000000",
+    "email": "ebd@gmail.com",
+    "password":"Password123&"
+}
+
+### user sign in endpoint
+
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+
+{
+    "email": "ebd@gmail.com",
+    "password":"Password123&"
+}
+
+### Get a user profile endpoint
+GET  http://localhost:5000/api/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiZEBnbWFpbC5jb20iLCJpYXQiOjE2NDczNTQ0NDUsImV4cCI6MTY0NzM1NTM0NX0.ThMGnFZWRBtyO-UNHGTuCchXKcPo7CRdY2BdSH9d3XE
+
+
+###Token routers
+
+### Get refreshed token
+GET http://localhost:5000/api/tokens
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiZEBnbWFpbC5jb20iLCJpYXQiOjE2NDc3MDI4NTAsImV4cCI6MTY1MDI5NDg1MH0.7k8sKrhd0ZXe8vyF3KXdQ-lWwyi-tEi1nBdpSDZj6vw
+
+
+#### Password reset request endpoints
+POST http://localhost:5000/api/user/reset-password
+Content-Type: application/json 
+
+{
+    "email": "abd@gmail.com"
+}
+
+#### Update new password endpoint
+PATCH  http://localhost:5000/api/user/reset-password
+Content-Type: application/json 
+
+{
+    "email": "abd@gmail.com",
+    "pin": "566061",
+    "newPassword": "Password123&"
+}
+
+
+#### user logout endpoint
+DELETE http://localhost:5000/api/user/logout
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiZEBnbWFpbC5jb20iLCJpYXQiOjE2NDc2NDM0MzcsImV4cCI6MTY0NzY0NzAzN30.WPL_N5reje779CM8n7G2QNTew97DvRLN1pO8S-6lya4
+
+###Ticket apis
+
+ 
+### Open new ticket
+POST http://localhost:5000/api/ticket
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImViZEBnbWFpbC5jb20iLCJpYXQiOjE2NDg0NjAyNTksImV4cCI6MTY0ODQ2Mzg1OX0.dEIkDd343QpwRO1PAQJSck42Z30ZzdAP2pV29un-9eE
+Content-Type: application/json 
+
+{
+ "subject": "Form Issue",
+  "sender": "Aymen",
+  "message": "1 Contact form not working. please fix it as soon as possible" 
+}
+
+###Get all the tickets
+GET http://localhost:5000/api/ticket
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImUyQGUuY29tIiwiaWF0IjoxNjA5ODkyOTMxLCJleHAiOjE2MDk5NzkzMzF9.sPqRPk6nKGpS5tMK0uYIJv778CWBfyn3zm_Y9iTS4Iw
+
+### Get single ticket
+GET http://localhost:5000/api/ticket/5fcd969896b6cb084ceafd19
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImUyQGUuY29tIiwiaWF0IjoxNjA5ODkxOTg0LCJleHAiOjE2MDk5NzgzODR9.7cUfpK_RF68a-xfxVXuet4PWVqwToUPyDXpupFlCQNI
+
+### Reply message to the ticket
+PUT http://localhost:5000/api/ticket/5fcd969896b6cb084ceafd19
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImUyQGUuY29tIiwiaWF0IjoxNjA5ODkxOTg0LCJleHAiOjE2MDk5NzgzODR9.7cUfpK_RF68a-xfxVXuet4PWVqwToUPyDXpupFlCQNI
+Content-Type: application/json 
+
+{ 
+    "message": "this is the 222 reply", 
+    "sender": "aymen" 
+}
+
+### Close the ticket
+PATCH http://localhost:5000/api/ticket/close-ticket/5fcd969896b6cb084ceafd19
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImUyQGUuY29tIiwiaWF0IjoxNjA5OTA0NjQyLCJleHAiOjE2MDk5OTEwNDJ9.hRSVE-AFfMnsnxgCouqV_W2U5A2nfVLOBClPE59GGls
+
+### Delete the ticket
+DELETE  http://localhost:5000/localhost:5000/api/tokens
+
+/ticket/5fcd969896b6cb084ceafd19
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImUyQGUuY29tIiwiaWF0IjoxNjA5ODkxOTg0LCJleHAiOjE2MDk5NzgzODR9.7cUfpK_RF68a-xfxVXuet4PWVqwToUPyDXpupFlCQNI
+

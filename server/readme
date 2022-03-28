@@ -1,0 +1,24 @@
+
+
+#	All the user API router follows /api/user/
+1	/api/user	GET	-----> Get user Info
+2	/api/user	POST ----->	Create a user
+3	/api/user/login	POST ----->	Verify user Authentication and return JWT
+4	/api/user/reset-password	POST ----->	Verify email and email pin to reset the password
+5	/api/user/reset-password	PATCH -----> Replace with new password
+6	/api/user/logout	DELETE -----> user accessJWT
+
+
+
+# All the user API router follows /api/ticket/	
+1	/api/ticket	GET ----->	Get all ticket for the logined in user
+2	/api/ticket/{id}	GET -----> Get a ticket details
+3	/api/ticket	POST ----->	Create a new ticket
+4	/api/ticket/{id}	PUT	-----> Update ticket details  reply message
+5	/api/ticket/close-ticket/{id}	PATCH -----> Update ticket status to close
+6	/api/ticket/{id}	DELETE -----> Delete a ticket
+
+
+
+# All the user API router follows /api/tokens
+1	/api/tokens	GET	-----> Get a fresh access JWT

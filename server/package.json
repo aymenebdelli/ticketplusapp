@@ -1,0 +1,36 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "client": "cd .. && cd client && npm start",
+    "dev": "concurrently -n 'client,server' -c 'green,red' \"npm run client\" \"nodemon app.js\""
+  },
+  "author": "aymen ebdelli",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "concurrently": "^7.0.0",
+    "connect-redis": "^6.1.1",
+    "connect-timeout": "^1.9.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.5",
+    "morgan": "^1.10.0",
+    "net": "^1.0.2",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "prettier": "2.6.0"
+  }
+}

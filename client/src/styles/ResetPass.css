@@ -1,0 +1,19 @@
+.reset-page{
+    min-height: 100vh;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#log-form{
+    border-radius: 8px;
+    background-color:blueviolet;
+    width: 50%;
+    cursor: pointer;
+    box-shadow: -0.5rem 0 3rem #000;
+    transition: 0.2s;
+}
+#log-form:hover{
+    transform: translateY(-0.5rem);
+}
