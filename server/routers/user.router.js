@@ -1,19 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const redis = require("redis")
-const session = require('express-session')
-const redisStore = require('connect-redis')(session)
-const client = redis.createClient()
 const app = express()
 const { route, post } = require("./ticket.router");
 
-app.use(session({
-	secret: process.env.JWT_ACCESS_SECRET,
-	// create new redis store.
-	store: new redisStore({ host: 'localhost', port: 6379, client: client, ttl: 260 }),
-	saveUninitialized: false,
-	resave: false
-}))
+
 
 const { insertUser, getUserByEmail, getUserById, updatePassword, storeUserRefreshJWT, verifyUser } = require('../modules/user/User.model')
 const { hashPassword, comparePassword } = require('../helpers/bcrypt.helper')

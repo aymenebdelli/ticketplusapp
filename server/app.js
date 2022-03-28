@@ -40,7 +40,7 @@ const mongoose = require("mongoose");
 //   app.use(morgan("tiny"));
 // }
 mongoose
-  .connect(process.env.MONGO_URL,{ useNewUrlParser: true, useUnifiedTopology: true ,
+  .connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true ,
     useUnifiedTopology: true })
   .then(() => {
     console.log('mongoDB connected...');

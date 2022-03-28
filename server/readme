@@ -1,4 +1,5 @@
-
+before doing anything go (cmd )then (cd server) then (npm run dev)
+note: you need to register and confirm your account in the UI register form && go email helper inside midlleware folder change fake email and password from (ethereal.com && nodmailer npm package) then visit ethereal.com(fake inbox give you URl for confirm account)
 
 #	All the user API router follows /api/user/
 1	/api/user	GET	-----> Get user Info
